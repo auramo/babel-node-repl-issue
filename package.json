@@ -1,0 +1,11 @@
+{
+  "name": "babel-node-issue",
+  "version": "0.0.1",
+  "description": "Demonstrate issue with Babel repl",
+  "private": true,
+  "license": "MIT",
+  "dependencies": {
+     "babel": "5.8.23",
+     "ramda": "0.17.1"
+  }
+}
