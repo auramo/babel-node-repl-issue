@@ -14,12 +14,14 @@ node_modules/.bin/babel-node
 ```
 
 Now, try to make an ES6-import of our example lib (ramda):
+
 ```
 import R from 'ramda'
 R.identity(1)
 ```
 
 This error occurs:
+
 ```
 R.identity(1);
 ^
@@ -34,8 +36,18 @@ R.identity(1)
 -> 1
 ```
 
-But when I do the same thing by compiling my ES6 code first, and then
-run it with node, everything works fine:
+But when I do the same thing import by compiling my ES6 code first,
+and then run it with node, everything works fine. The test code (test-module.js):
+
+```
+import R from 'ramda'
+
+const retval = R.identity(1)
+console.log(retval)
+```
+
+Compile and run:
+
 ```
 node_modules/.bin/babel test-module.js --out-file test-module-compiled.js
 node test-module-compiled.js
